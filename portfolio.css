@@ -1,0 +1,246 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+title{
+  font-size: larger;
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: lightblue;
+  scroll-behavior: smooth;
+  font-size: larger;
+}
+
+/* Header Styles */
+header {
+  background: #fff;
+  border-bottom: 1px solid #7b5050;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+header.scrolled {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.logo h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background: #007BFF;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #007BFF;
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Social Icons */
+.social-icons a {
+  margin-left: 15px;
+}
+
+.social-icons img {
+  width: 24px;
+  transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* Hero Section */
+#hero {
+  margin-top: 80px;
+  background: url('https://mixable.blog/wp-content/uploads/2020/02/kelli-tungay-2LJ4rqK2qfU-unsplash-scaled-e1581583092495.jpg') center/cover no-repeat;
+  height: 150vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-container {
+  text-align: center;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  animation: fadeIn 1s ease;
+}
+
+.hero-container img {
+  width: 150px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  margin-bottom: 20px;
+  animation: scaleUp 0.6s forwards;
+  opacity: 0;
+}
+
+.hero-container img.show {
+  opacity: 1;
+}
+
+.hero-container h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero-container .btn {
+  padding: 10px 30px;
+  background: #007BFF;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 18px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.hero-container .btn:hover {
+  background: #0056b3;
+  transform: translateY(-3px);
+}
+
+/* Section Styles */
+section {
+  padding: 60px 0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 32px;
+  font-weight: 600;
+  color: black;
+}
+
+/* About Section */
+#about p {
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Projects Section */
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.project {
+  background: #fff;
+  flex: 1 1 calc(33% - 20px);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 20px;
+  text-align: center;
+  transition: background 0.3s;
+}
+
+.project-content:hover {
+  background: #f9f9f9;
+}
+
+.project-content h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.project-content p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.project-content .btn {
+  padding: 10px 25px;
+  background: #007BFF;
+ 
+}
+
